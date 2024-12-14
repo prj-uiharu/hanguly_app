@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "hanguly",
+    "slug": "hanguly",
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "aabd0fc9-0860-4371-b6d4-0ef823fd0c88"
+      }
+    }
+  }
+}

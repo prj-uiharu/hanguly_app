@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .language-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .language-switch button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .language-switch button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+            }
+
+            .language-switch {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="page-title">개인정보 처리방침</h1>
+    </header>
+
+    <div class="content">
+        <div class="language-switch">
+            <button onclick="switchLanguage('ko')">한국어</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <div id="privacy-policy">
+            <h2>개인정보 처리방침</h2>
+            <p>저희 서비스는 사용자가 API 요청을 보낼 때 입력한 정보 외에는 어떠한 개인정보도 수집하지 않습니다.</p>
+            <p>본 처리방침은 사용자의 개인정보를 안전하게 보호하기 위해 마련되었습니다.</p>
+        </div>
+    </div>
+
+    <script>
+        const policies = {
+            ko: {
+                title: '개인정보 처리방침',
+                content: `
+                    <h2>개인정보 처리방침</h2>
+                    <p>저희 서비스는 사용자가 API 요청을 보낼 때 입력한 정보 외에는 어떠한 개인정보도 수집하지 않습니다.</p>
+                    <p>본 처리방침은 사용자의 개인정보를 안전하게 보호하기 위해 마련되었습니다.</p>
+                `
+            },
+            en: {
+                title: 'Privacy Policy',
+                content: `
+                    <h2>Privacy Policy</h2>
+                    <p>Our service collects no personal information other than the data entered by users when sending API requests.</p>
+                    <p>This policy has been established to protect users' personal information securely.</p>
+                `
+            }
+        };
+
+        function switchLanguage(lang) {
+            const policy = policies[lang];
+            document.getElementById('page-title').innerText = policy.title;
+            document.getElementById('privacy-policy').innerHTML = policy.content;
+        }
+    </script>
+</body>
+</html>

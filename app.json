@@ -3,6 +3,26 @@
     "name": "hanguly",
     "slug": "hanguly",
     "version": "1.0.0",
+	"icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7ed8dc"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.phonestats"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
     "extra": {
       "eas": {
         "projectId": "aabd0fc9-0860-4371-b6d4-0ef823fd0c88"
